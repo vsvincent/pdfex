@@ -4,3 +4,9 @@ version = "0.1.0"
 edition = "2021"
 
 [dependencies]
+pdf2image = "0.1.2"
+poppler = "0.5.1"
+structopt = "0.3.26"
+
+[build-dependencies]
+pkg-config = "0.3.31"
