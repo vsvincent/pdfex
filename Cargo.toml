@@ -7,6 +7,7 @@ edition = "2021"
 pdf2image = "0.1.2"
 poppler = "0.5.1"
 structopt = "0.3.26"
+tesseract = "0.15.1"
 
 [build-dependencies]
 pkg-config = "0.3.31"

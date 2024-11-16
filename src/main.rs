@@ -46,7 +46,10 @@ fn main() -> Result<(), PDF2ImageError> {
     for (i, page) in pages_enumerable {
         let file_name = format!("{}page_{}.jpg", opt.save_dir, i + 1);
         match page.save(&file_name) {
-            Ok(_) => println!("Saved {}", file_name),
+            Ok(_) => {
+                println!("Saved {}", file_name);
+                utils::text::extract_text_from_image(&file_name).unwrap();
+            }
             Err(e) => eprintln!("Failed to save {}: {}", file_name, e),
         }
     }
